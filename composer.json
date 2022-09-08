@@ -1,0 +1,20 @@
+{
+    "name": "shahdah/sadded",
+    "description": "Arabic payments gateways package",
+    "type": "library",
+    "license": "mit",
+    "autoload": {
+        "psr-4": {
+            "Shahdah\\Sadded\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "elhadiabdallah",
+            "email": "3arafa109@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "guzzlehttp/guzzle": "^7.0"
+    }
+}
