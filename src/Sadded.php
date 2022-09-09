@@ -2,17 +2,24 @@
 
 namespace Shahdah\Sadded;
 
+use Shahdah\Sadded\Providers\ProviderFactory;
+
+/**
+ * Class Sadded
+ * @package Shahdah\Sadded
+ */
 class Sadded
 {
 
     public function __construct(
-        public readonly string $provider,
+        public readonly string $provider
     ) {
     }
 
-    public function getway()
+    public  function getway()
     {
-        $getway = 'Shahdah\\Sadded\\providers\\' . $this->provider;
-        return  new $getway();
+        $factory = new ProviderFactory();
+        $getway = $factory->create($this->provider);
+        return $getway;
     }
 }
